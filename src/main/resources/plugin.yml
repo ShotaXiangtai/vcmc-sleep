@@ -1,0 +1,26 @@
+name: vcmc-sleep
+version: '${project.version}'
+main: com.vcmc.sleep.VcmcSleep
+api-version: '26.1'
+folia-supported: true
+description: 過半数のプレイヤーがベッドで寝たら朝になるプラグイン
+authors:
+  - vcmc
+
+commands:
+  vcmcsleep:
+    description: vcmc-sleep の管理コマンド
+    usage: /vcmcsleep reload
+    aliases:
+      - vsleep
+    permission: vcmcsleep.admin
+
+permissions:
+  vcmcsleep.reload:
+    description: 設定をリロードする権限
+    default: op
+  vcmcsleep.admin:
+    description: vcmc-sleep の管理コマンドを使う権限
+    default: op
+    children:
+      vcmcsleep.reload: true

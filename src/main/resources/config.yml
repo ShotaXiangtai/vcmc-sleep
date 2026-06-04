@@ -1,0 +1,40 @@
+# vcmc-sleep 設定ファイル
+# ==========================================
+
+# 就寝が必要なプレイヤーの割合 (%)
+# デフォルト: 50 (過半数)
+# 例: 100 = 全員、33 = 3人に1人、1 = 1人でも寝れば朝になる
+sleep-percentage: 50.0
+
+# スペクテーターモードのプレイヤーをカウントから除外するか
+# true = スペクテーターは除外 (推奨)
+# false = スペクテーターも含める
+exclude-spectators: true
+
+# バニラの就寝スキップを無効化するか
+# true = このプラグインが就寝を管理する (推奨)
+# false = バニラの playersSleepingPercentage ゲームルールを変更しない
+disable-vanilla-sleep: true
+
+# メッセージ設定
+# カラーコードは & を使用 (例: &a = 緑, &e = 黄, &c = 赤)
+# {player} = プレイヤー名
+# {sleeping} = 就寝中のプレイヤー数
+# {total} = 対象プレイヤーの合計数
+# {percentage} = 現在の就寝割合 (%)
+# {required} = 必要な就寝割合 (%)
+messages:
+  # プレイヤーがベッドに入ったときのメッセージ
+  player-sleep: "&7{player} がベッドに入りました。"
+
+  # 就寝状況のカウント表示
+  sleep-count: "&e{sleeping}/{total} 人が就寝中 ({percentage}% / 必要: {required}%)"
+
+  # 朝になったときのメッセージ
+  morning: "&a朝になりました！おはようございます！"
+
+  # 設定リロード時のメッセージ
+  reload: "&avcmc-sleep の設定をリロードしました。"
+
+  # 権限がない場合のメッセージ
+  no-permission: "&cこのコマンドを実行する権限がありません。"
