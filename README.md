@@ -38,4 +38,4 @@ disable-vanilla-sleep: true
 
 ## ライセンス
 
-Public Domain ([Unlicense](UNLICENSE))
+[GNU General Public License v3.0](LICENSE)
